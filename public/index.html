@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>ReadBook</title>
+</head>
+<body ng-controller="MainCtrl">
+	<header class="header grid">
+		<div class="grid__col">
+			<div class="header__logo">readbook</div>
+			<div class="header__search"></div>
+		</div>
+		<div class="grid__col">
+		</div>
+	</header>
+	<sidebar class="sidebar">
+		<h1>Categories</h1>
+		<ul>
+			<li>Art</li>
+			<li>Style</li>
+			<li>Design</li>
+			<li>Home</li>
+			<li>Travel</li>
+			<li>Food</li>
+			<li>Healthy</li>
+		</ul>
+	</sidebar>
+	<content class="content">
+		<div class="book" ng-repeat="book in books">
+			<h1 class="book__title">{{ book.title }}</h1>
+			<h2 class="book__author">{{ book.author }}</h2>
+			<p class="book__description">{{ book.description }}</p>
+		</div>
+	</content>
+	
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+</html>
